@@ -113,7 +113,7 @@ div {
     z-index: 1;
     -webkit-transition: background 400ms ease;
             transition: background 400ms ease;
-    background: url("/images/windows-xp-wallpaper.jpg") center center no-repeat;
+    background: url("../images/windows-xp-wallpaper.jpg") center center no-repeat;
     ms-transform: scale(1.2, 1.2);
     -webkit-transform: scale(1.2, 1.2);
     -ms-transform: scale(1.2, 1.2);
@@ -319,7 +319,7 @@ div {
     left: -10%;
     top: -10%;
     width: 120%;
-    background: url("/images/windows-xp-wallpaper.jpg") center center no-repeat;
+    background: url("../images/windows-xp-wallpaper.jpg") center center no-repeat;
     background-size: cover;
     display: block;
     content: '';
@@ -767,7 +767,7 @@ div {
 
 /************************* sections **************************/
 .xp #taskbar .start-wrapper .start-icon {
-  background: url("/images/icons/winxp-icon.png") center center no-repeat;
+  background: url("../images/icons/winxp-icon.png") center center no-repeat;
   width: 60%;
   height: 25px;
   background-size: contain;
@@ -807,15 +807,15 @@ div {
   height: 100%;
   top: 0;
   left: 0;
-  background: url("/images/winxp-window-controls.png") 34px -3px; }
+  background: url("../images/winxp-window-controls.png") 34px -3px; }
 
 .xp #desktop .desktop-contain .desktop-icon-contain .desktop-icon {
   width: 100%;
   height: 100%; }
   .xp #desktop .desktop-contain .desktop-icon-contain .desktop-icon.browser {
-    background: url("/images/icons/icons-xp.png") -50px 85px; }
+    background: url("../images/icons/icons-xp.png") -50px 85px; }
   .xp #desktop .desktop-contain .desktop-icon-contain .desktop-icon.mycomputer {
-    background: url("/images/icons/icons-xp.png") 0px 4px; }
+    background: url("../images/icons/icons-xp.png") 0px 4px; }
 
 .browser .window_content iframe {
   width: 100%;
