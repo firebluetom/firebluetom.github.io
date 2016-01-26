@@ -1,3 +1,145 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -91,7 +233,7 @@ div {
     z-index: 1;
     -webkit-transition: background 400ms ease;
             transition: background 400ms ease;
-    background: url("/images/windows-xp-wallpaper.jpg") center center no-repeat; }
+    background: url("../images/windows-xp-wallpaper.jpg") center center no-repeat; }
     #page .login-background .login-form-contain {
       top: 0;
       left: 0;
@@ -155,7 +297,7 @@ div {
     left: -10%;
     top: -10%;
     width: 120%;
-    background: url("/images/windows-xp-wallpaper.jpg") center center no-repeat;
+    background: url("../images/windows-xp-wallpaper.jpg") center center no-repeat;
     background-size: cover;
     display: block;
     content: '';
@@ -583,7 +725,7 @@ div {
 
 /************************* sections **************************/
 .xp #taskbar .start-wrapper .start-icon {
-  background: url("/images/icons/winxp-icon.png") center center no-repeat;
+  background: url("../images/icons/winxp-icon.png") center center no-repeat;
   width: 60%;
   height: 25px;
   background-size: contain;
@@ -608,7 +750,7 @@ div {
     background: -webkit-linear-gradient(#1378fd 10%, #03469e);
     background: linear-gradient(#1378fd 10%, #03469e); }
     .xp .window .window_inner .window-top .float_right .min, .xp .window .window_inner .window-top .float_right .res, .xp .window .window_inner .window-top .float_right .close {
-      background-image: url("/images/winxp-window-controls.png");
+      background-image: url("../images/winxp-window-controls.png");
       width: 100%;
       height: 100%;
       opacity: 0.8;
@@ -624,7 +766,7 @@ div {
     .xp .window .window_inner .window-top .float_right .close {
       background-position: 32px 0px; }
   .xp .window.recyclebin .window_inner .window_content {
-    background-image: url("/images/xp_recyclebin.gif");
+    background-image: url("../images/xp_recyclebin.gif");
     background-position: -4px -30px;
     background-repeat: no-repeat; }
 
@@ -634,9 +776,9 @@ div {
   background-repeat: no-repeat;
   background-size: contain; }
   .xp #desktop .desktop-contain .desktop-icon-contain .desktop-icon.mycomputer {
-    background: url("/images/icons/icons-xp.png") 0px 4px; }
+    background: url("../images/icons/icons-xp.png") 0px 4px; }
   .xp #desktop .desktop-contain .desktop-icon-contain .desktop-icon.recyclebin {
-    background: url("/images/icons/icons-xp.png") -5px -79px; }
+    background: url("../images/icons/icons-xp.png") -5px -79px; }
 
 .win-7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon {
   width: 100%;
@@ -644,18 +786,18 @@ div {
   background-repeat: no-repeat;
   background-size: contain; }
   .win-7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.mycomputer {
-    background: url("/images/icons/icons-xp.png") 0px 4px; }
+    background: url("../images/icons/icons-xp.png") 0px 4px; }
   .win-7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.recyclebin {
-    background: url("/images/icons/icons-xp.png") 0px -79px; }
+    background: url("../images/icons/icons-xp.png") 0px -79px; }
 
 .desktop-icon.weather {
   background-size: contain;
   background-repeat: no-repeat;
-  background: url("/images/icons/weather2.png");
+  background: url("../images/icons/weather2.png");
   background-position: 0px 15px; }
 
 .desktop-icon.browser {
-  background: url("/images/icons/spin-top.png") 5px 0px;
+  background: url("../images/icons/spin-top.png") 5px 0px;
   background-size: contain;
   background-repeat: no-repeat; }
 
@@ -663,145 +805,3 @@ div {
   width: 100%;
   height: -webkit-calc( 100% - 30px);
   height: calc( 100% - 30px); }
-
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
-
-body {
-  margin: 0; }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block; }
-
-audio, canvas, progress, video {
-  display: inline-block;
-  vertical-align: baseline; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-[hidden], template {
-  display: none; }
-
-a {
-  background-color: transparent; }
-
-a:active, a:hover {
-  outline: 0; }
-
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-b, strong {
-  font-weight: bold; }
-
-dfn {
-  font-style: italic; }
-
-h1 {
-  font-size: 2em;
-  margin: .67em 0; }
-
-mark {
-  background: #ff0;
-  color: #000; }
-
-small {
-  font-size: 80%; }
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  border: 0; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-figure {
-  margin: 1em 40px; }
-
-hr {
-  box-sizing: content-box;
-  height: 0; }
-
-pre {
-  overflow: auto; }
-
-code, kbd, pre, samp {
-  font-family: monospace,monospace;
-  font-size: 1em; }
-
-button, input, optgroup, select, textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0; }
-
-button {
-  overflow: visible; }
-
-button, select {
-  text-transform: none; }
-
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer; }
-
-button[disabled], html input[disabled] {
-  cursor: default; }
-
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-input {
-  line-height: normal; }
-
-input[type="checkbox"], input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0; }
-
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  box-sizing: content-box; }
-
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-fieldset {
-  border: 1px solid silver;
-  margin: 0 2px;
-  padding: .35em .625em .75em; }
-
-legend {
-  border: 0;
-  padding: 0; }
-
-textarea {
-  overflow: auto; }
-
-optgroup {
-  font-weight: bold; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-td, th {
-  padding: 0; }
