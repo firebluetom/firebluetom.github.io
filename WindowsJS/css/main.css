@@ -765,10 +765,57 @@ div {
       background-position: -29px 0; }
     .xp .window .window_inner .window-top .float_right .close {
       background-position: 32px 0px; }
-  .xp .window.recyclebin .window_inner .window_content {
-    background-image: url("../images/xp_recyclebin.gif");
-    background-position: -4px -30px;
-    background-repeat: no-repeat; }
+  .xp .window .window_inner .window-icon {
+    background-image: url("../images/icons/icons-xp.png");
+    height: 100%;
+    width: 100%;
+    background-size: 80px; }
+  .xp .window.recyclebin .window_inner .window-icon {
+    background-position: 4px 86px; }
+  .xp .window.mycomputer .window_inner .window-icon {
+    background-position: 2px 0px; }
+  .xp .window.mycomputer .window_content .file-menu, .xp .window.mycomputer .window_content .nav-menu, .xp .window.mycomputer .window_content .address-bar, .xp .window.recyclebin .window_content .file-menu, .xp .window.recyclebin .window_content .nav-menu, .xp .window.recyclebin .window_content .address-bar {
+    font-size: 12px;
+    width: 100%;
+    border-bottom: 2px solid gray;
+    background-color: #EFEDD8;
+    overflow: hidden; }
+    .xp .window.mycomputer .window_content .file-menu ul, .xp .window.mycomputer .window_content .nav-menu ul, .xp .window.mycomputer .window_content .address-bar ul, .xp .window.recyclebin .window_content .file-menu ul, .xp .window.recyclebin .window_content .nav-menu ul, .xp .window.recyclebin .window_content .address-bar ul {
+      height: 100%; }
+      .xp .window.mycomputer .window_content .file-menu ul > li, .xp .window.mycomputer .window_content .nav-menu ul > li, .xp .window.mycomputer .window_content .address-bar ul > li, .xp .window.recyclebin .window_content .file-menu ul > li, .xp .window.recyclebin .window_content .nav-menu ul > li, .xp .window.recyclebin .window_content .address-bar ul > li {
+        height: 100%;
+        padding: 5px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle; }
+        .xp .window.mycomputer .window_content .file-menu ul > li:hover, .xp .window.mycomputer .window_content .nav-menu ul > li:hover, .xp .window.mycomputer .window_content .address-bar ul > li:hover, .xp .window.recyclebin .window_content .file-menu ul > li:hover, .xp .window.recyclebin .window_content .nav-menu ul > li:hover, .xp .window.recyclebin .window_content .address-bar ul > li:hover {
+          box-shadow: 0px 0px 2px gray;
+          border-radius: 2px; }
+  .xp .window.mycomputer .window_content .file-menu, .xp .window.recyclebin .window_content .file-menu {
+    height: 20px; }
+  .xp .window.mycomputer .window_content .nav-menu, .xp .window.recyclebin .window_content .nav-menu {
+    height: 40px; }
+    .xp .window.mycomputer .window_content .nav-menu ul > li, .xp .window.recyclebin .window_content .nav-menu ul > li {
+      width: 60px; }
+  .xp .window.mycomputer .window_content .address-bar, .xp .window.recyclebin .window_content .address-bar {
+    height: 20px; }
+    .xp .window.mycomputer .window_content .address-bar ul > li:nth-child(2), .xp .window.recyclebin .window_content .address-bar ul > li:nth-child(2) {
+      padding: 0; }
+  .xp .window.mycomputer .window_content .left-side, .xp .window.mycomputer .window_content .right-side, .xp .window.recyclebin .window_content .left-side, .xp .window.recyclebin .window_content .right-side {
+    display: inline-block;
+    height: -webkit-calc( 100% - 80px);
+    height: calc( 100% - 80px);
+    position: absolute;
+    overflow: auto; }
+  .xp .window.mycomputer .window_content .left-side, .xp .window.recyclebin .window_content .left-side {
+    background-color: #7292E0;
+    width: 100px;
+    left: 0; }
+  .xp .window.mycomputer .window_content .right-side, .xp .window.recyclebin .window_content .right-side {
+    background-color: #fff;
+    width: -webkit-calc( 100% - 100px);
+    width: calc( 100% - 100px);
+    right: 0; }
 
 .xp #desktop .desktop-contain .desktop-icon-contain .desktop-icon {
   width: 100%;
