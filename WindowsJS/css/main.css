@@ -468,8 +468,6 @@ div {
     color: #fff;
     width: 100px;
     height: 100%;
-    background: -webkit-radial-gradient(circle, #01C101, green);
-    background: radial-gradient(circle, #01C101, green);
     -webkit-transition: background 0.3s ease;
             transition: background 0.3s ease;
     border-radius: 0 20px 20px 0px;
@@ -477,12 +475,14 @@ div {
     position: absolute;
     color: #fff;
     left: -10px; }
-    #taskbar .start-wrapper:hover {
-      background: -webkit-radial-gradient(circle, #01C101, #018C01);
-      background: radial-gradient(circle, #01C101, #018C01); }
-    #taskbar .start-wrapper.button-active {
-      background: -webkit-radial-gradient(circle, #01C101, #018C01);
-      background: radial-gradient(circle, #01C101, #018C01); }
+    #taskbar .start-wrapper .start-menu {
+      position: absolute;
+      bottom: 100%;
+      left: 10px;
+      width: 350px;
+      color: black;
+      background: #fff;
+      display: none; }
     #taskbar .start-wrapper .taskbar-icon {
       width: 30px;
       height: 30px; }
@@ -492,6 +492,14 @@ div {
     width: calc( 100% - 90px);
     position: absolute;
     left: 90px; }
+    #taskbar .taskbar-dock .dock-windows {
+      width: -webkit-calc( 100% - 200px);
+      width: calc( 100% - 200px);
+      color: #fff;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
     #taskbar .taskbar-dock .notification-area {
       position: absolute;
       width: 200px;
@@ -690,14 +698,23 @@ div {
 
 /************************* sections **************************/
 .xp #taskbar .start-wrapper {
-  -webkit-transition: all 100ms linear;
-          transition: all 100ms linear; }
+  -webkit-transition: all 200ms linear;
+          transition: all 200ms linear;
+  background: -webkit-radial-gradient(circle, #01C101, #018C01);
+  background: -webkit-radial-gradient(circle, #02A902, #027902);
+  background: radial-gradient(circle, #02A902, #027902); }
   .xp #taskbar .start-wrapper.active {
     background: -webkit-radial-gradient(circle, #01C101, #018C01);
     background: radial-gradient(circle, #01C101, #018C01);
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5); }
     .xp #taskbar .start-wrapper.active .start-menu {
       display: block; }
+  .xp #taskbar .start-wrapper:hover {
+    background: -webkit-radial-gradient(circle, #01C101, #018C01);
+    background: radial-gradient(circle, #01C101, #018C01); }
+  .xp #taskbar .start-wrapper.button-active {
+    background: -webkit-radial-gradient(circle, #01C101, #018C01);
+    background: radial-gradient(circle, #01C101, #018C01); }
   .xp #taskbar .start-wrapper .start-icon {
     width: 60%;
     height: 25px;
@@ -758,73 +775,65 @@ div {
       height: 40px;
       padding: 5px; }
 
-.xp #taskbar .dock-windows {
-  width: -webkit-calc( 100% - 200px);
-  width: calc( 100% - 200px);
-  color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .xp #taskbar .dock-windows .taskbar-icon-contain {
-    display: inline-block;
-    width: 185px;
-    padding-left: 40px; }
-    .xp #taskbar .dock-windows .taskbar-icon-contain::before {
-      content: "";
-      width: -webkit-calc( 100% - 40px);
-      width: calc( 100% - 40px);
-      text-align: center;
-      height: 100%;
-      top: 25%;
+.xp #taskbar .dock-windows .taskbar-icon-contain {
+  display: inline-block;
+  width: 185px;
+  padding-left: 40px; }
+  .xp #taskbar .dock-windows .taskbar-icon-contain::before {
+    content: "";
+    width: -webkit-calc( 100% - 40px);
+    width: calc( 100% - 40px);
+    text-align: center;
+    height: 100%;
+    top: 25%;
+    position: absolute;
+    padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .xp #taskbar .dock-windows .taskbar-icon-contain[title="mycomputer"]::before {
+    content: "My Computer"; }
+  .xp #taskbar .dock-windows .taskbar-icon-contain[title="mydocuments"]::before {
+    content: "My Documents"; }
+  .xp #taskbar .dock-windows .taskbar-icon-contain[title="browser"]::before {
+    content: "Inception Browser"; }
+  .xp #taskbar .dock-windows .taskbar-icon-contain[title="recyclebin"]::before {
+    content: "Recycle Bin"; }
+  .xp #taskbar .dock-windows .taskbar-icon-contain[title="weather"]::before {
+    content: "Weather"; }
+  .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon {
+    width: 30px;
+    height: 30px; }
+    .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon::before {
+      background-image: url("../images/icons/icons-xp.png");
+      height: 40px;
+      width: 35px;
+      background-size: 130px;
       position: absolute;
-      padding-right: 10px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    .xp #taskbar .dock-windows .taskbar-icon-contain[title="mycomputer"]::before {
-      content: "My Computer"; }
-    .xp #taskbar .dock-windows .taskbar-icon-contain[title="mydocuments"]::before {
-      content: "My Documents"; }
-    .xp #taskbar .dock-windows .taskbar-icon-contain[title="browser"]::before {
-      content: "Inception Browser"; }
-    .xp #taskbar .dock-windows .taskbar-icon-contain[title="recyclebin"]::before {
-      content: "Recycle Bin"; }
-    .xp #taskbar .dock-windows .taskbar-icon-contain[title="weather"]::before {
-      content: "Weather"; }
-    .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon {
-      width: 30px;
-      height: 30px; }
-      .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon::before {
-        background-image: url("../images/icons/icons-xp.png");
-        height: 40px;
-        width: 35px;
-        background-size: 130px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: ""; }
-      .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.mycomputer::before {
-        background-position: 0px 0px; }
-      .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.mydocuments::before {
-        background-position: 0px -103px; }
-      .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.recyclebin::before {
-        background-position: -4px -68px; }
-      .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.browser::before {
-        background-position: 6px 3px;
-        background-image: url("../images/icons/spin-top.png");
-        background-size: 75%;
-        background-repeat: no-repeat; }
-      .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.weather::before {
-        background-size: 85%;
-        background-repeat: no-repeat;
-        background-image: url("../images/icons/weather2.png");
-        background-position: 5px 10px;
-        -webkit-filter: brightness(3);
-        filter: brightness(3); }
-    .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon-child .taskbar-icon.weather::before {
-      filter: none;
-      -webkit-filter: none; }
+      left: 0;
+      top: 0;
+      content: ""; }
+    .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.mycomputer::before {
+      background-position: 0px 0px; }
+    .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.mydocuments::before {
+      background-position: 0px -103px; }
+    .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.recyclebin::before {
+      background-position: -4px -68px; }
+    .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.browser::before {
+      background-position: 6px 3px;
+      background-image: url("../images/icons/spin-top.png");
+      background-size: 75%;
+      background-repeat: no-repeat; }
+    .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon.weather::before {
+      background-size: 85%;
+      background-repeat: no-repeat;
+      background-image: url("../images/icons/weather2.png");
+      background-position: 5px 10px;
+      -webkit-filter: brightness(3);
+      filter: brightness(3); }
+  .xp #taskbar .dock-windows .taskbar-icon-contain .taskbar-icon-child .taskbar-icon.weather::before {
+    filter: none;
+    -webkit-filter: none; }
 
 .xp .window {
   border-radius: 3px; }
@@ -926,16 +935,313 @@ div {
   background-repeat: no-repeat;
   background-size: contain; }
 
-.win-7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon {
+.win7 #taskbar {
+  background: none;
+  border-top: 1px solid #0f84f6;
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.5); }
+  .win7 #taskbar::before {
+    background: -webkit-linear-gradient(#1378fd 10%, #03469e);
+    background: linear-gradient(#1378fd 10%, #03469e);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; }
+  .win7 #taskbar .start-wrapper {
+    -webkit-transition: all 100ms linear;
+            transition: all 100ms linear; }
+    .win7 #taskbar .start-wrapper.active .start-menu {
+      display: block; }
+    .win7 #taskbar .start-wrapper .start-icon {
+      width: 60%;
+      height: 100%;
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      left: -10px; }
+      .win7 #taskbar .start-wrapper .start-icon::before {
+        background: url("../images/StartWin7.png") center center no-repeat;
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 5px;
+        background-size: contain; }
+      .win7 #taskbar .start-wrapper .start-icon span {
+        display: none; }
+  .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain {
+    display: inline-block;
+    width: 185px;
+    padding-left: 40px; }
+    .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain::before {
+      content: "";
+      width: -webkit-calc( 100% - 40px);
+      width: calc( 100% - 40px);
+      text-align: center;
+      height: 100%;
+      top: 25%;
+      position: absolute;
+      padding-right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="mycomputer"]::before {
+      content: "My Computer"; }
+    .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="mydocuments"]::before {
+      content: "My Documents"; }
+    .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="browser"]::before {
+      content: "Inception Browser"; }
+    .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="recyclebin"]::before {
+      content: "Recycle Bin"; }
+    .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="weather"]::before {
+      content: "Weather"; }
+    .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon {
+      width: 30px;
+      height: 30px; }
+      .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon::before {
+        background-image: url("../images/icons/icons-xp.png");
+        height: 40px;
+        width: 35px;
+        background-size: 130px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: ""; }
+      .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.mycomputer::before {
+        background-position: 0px 0px; }
+      .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.mydocuments::before {
+        background-position: 0px -103px; }
+      .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.recyclebin::before {
+        background-position: -4px -68px; }
+      .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.browser::before {
+        background-position: 6px 3px;
+        background-image: url("../images/icons/spin-top.png");
+        background-size: 75%;
+        background-repeat: no-repeat; }
+      .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.weather::before {
+        background-size: 85%;
+        background-repeat: no-repeat;
+        background-image: url("../images/icons/weather2.png");
+        background-position: 5px 10px;
+        -webkit-filter: brightness(3);
+        filter: brightness(3); }
+    .win7 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon-child .taskbar-icon.weather::before {
+      filter: none;
+      -webkit-filter: none; }
+  .win7 #taskbar .taskbar-dock .notification-area {
+    background: none; }
+
+.win7 #desktop::before {
+  background: url("../images/windows-7-wallpaper.jpg") 0px 4px;
+  left: 0;
+  top: -10%;
+  width: 100%;
+  height: 110%;
+  background-size: cover; }
+
+.win7 #desktop .desktop-contain .window {
+  border-radius: 3px; }
+  .win7 #desktop .desktop-contain .window .window_inner .window-top {
+    background: none; }
+    .win7 #desktop .desktop-contain .window .window_inner .window-top::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: -webkit-linear-gradient(#1378fd 10%, #03469e);
+      background: linear-gradient(#1378fd 10%, #03469e);
+      -webkit-filter: blur(2px);
+              filter: blur(2px);
+      content: ''; }
+    .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .window-close, .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .window-min, .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .window-resize {
+      height: 25px;
+      width: 20px; }
+    .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .window-close {
+      width: 41px; }
+    .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .min, .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .res, .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .close {
+      background-image: url("../images/win7-window-controls.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      -webkit-transition: all 300ms ease;
+              transition: all 300ms ease; }
+      .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .min:hover, .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .res:hover, .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .close:hover {
+        opacity: 1; }
+    .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .min {
+      background-position: 0 0;
+      border-radius: 0 0 0 10px; }
+    .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .res {
+      background-position: -21px 0; }
+    .win7 #desktop .desktop-contain .window .window_inner .window-top .float_right .close {
+      background-position: -41px 0px;
+      border-radius: 0 0 10px 0; }
+
+.win7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain; }
-  .win-7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.mycomputer {
+  .win7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.mycomputer {
     background: url("../images/icons/icons-xp.png") 0px 4px; }
-  .win-7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.mydocuments {
+  .win7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.mydocuments {
     background: url("../images/icons/icons-xp.png") 0px -120px; }
-  .win-7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.recyclebin {
+  .win7 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.recyclebin {
+    background: url("../images/icons/icons-xp.png") 0px -79px; }
+
+.win10 #taskbar {
+  background: none;
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.5); }
+  .win10 #taskbar::before {
+    content: '';
+    background: -webkit-linear-gradient(#023982 10%, #001C42);
+    background: linear-gradient(#023982 10%, #001C42);
+    background: #001531;
+    width: 100%;
+    height: 100%; }
+  .win10 #taskbar .start-wrapper {
+    -webkit-transition: all 100ms linear;
+            transition: all 100ms linear; }
+    .win10 #taskbar .start-wrapper.active .start-menu {
+      display: block; }
+    .win10 #taskbar .start-wrapper .start-icon {
+      width: 60%;
+      height: 100%;
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      left: -10px; }
+      .win10 #taskbar .start-wrapper .start-icon::before {
+        background: url("../images/StartWin10.png") center center no-repeat;
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 5px;
+        background-size: contain; }
+      .win10 #taskbar .start-wrapper .start-icon span {
+        display: none; }
+  .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain {
+    display: inline-block;
+    width: 185px;
+    padding-left: 40px; }
+    .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain::before {
+      content: "";
+      width: -webkit-calc( 100% - 40px);
+      width: calc( 100% - 40px);
+      text-align: center;
+      height: 100%;
+      top: 25%;
+      position: absolute;
+      padding-right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="mycomputer"]::before {
+      content: "My Computer"; }
+    .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="mydocuments"]::before {
+      content: "My Documents"; }
+    .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="browser"]::before {
+      content: "Inception Browser"; }
+    .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="recyclebin"]::before {
+      content: "Recycle Bin"; }
+    .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain[title="weather"]::before {
+      content: "Weather"; }
+    .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon {
+      width: 30px;
+      height: 30px; }
+      .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon::before {
+        background-image: url("../images/icons/icons-xp.png");
+        height: 40px;
+        width: 35px;
+        background-size: 130px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: ""; }
+      .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.mycomputer::before {
+        background-position: 0px 0px; }
+      .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.mydocuments::before {
+        background-position: 0px -103px; }
+      .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.recyclebin::before {
+        background-position: -4px -68px; }
+      .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.browser::before {
+        background-position: 6px 3px;
+        background-image: url("../images/icons/spin-top.png");
+        background-size: 75%;
+        background-repeat: no-repeat; }
+      .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon.weather::before {
+        background-size: 85%;
+        background-repeat: no-repeat;
+        background-image: url("../images/icons/weather2.png");
+        background-position: 5px 10px;
+        -webkit-filter: brightness(3);
+        filter: brightness(3); }
+    .win10 #taskbar .taskbar-dock .dock-windows .taskbar-icon-contain .taskbar-icon-child .taskbar-icon.weather::before {
+      filter: none;
+      -webkit-filter: none; }
+  .win10 #taskbar .taskbar-dock .notification-area {
+    background: none; }
+
+.win10 #desktop::before {
+  background: url("../images/windows-10-wallpaper.jpg") 0px 4px;
+  left: 0;
+  top: -10%;
+  width: 100%;
+  height: 110%;
+  background-size: cover; }
+
+.win10 #desktop .desktop-contain .window {
+  border-radius: 3px; }
+  .win10 #desktop .desktop-contain .window .window_inner .window-top {
+    background: none; }
+    .win10 #desktop .desktop-contain .window .window_inner .window-top::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: -webkit-linear-gradient(#1378fd 10%, #03469e);
+      background: linear-gradient(#1378fd 10%, #03469e);
+      -webkit-filter: blur(2px);
+              filter: blur(2px);
+      content: ''; }
+    .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .window-close, .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .window-min, .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .window-resize {
+      height: 25px;
+      width: 20px; }
+    .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .window-close {
+      width: 41px; }
+    .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .min, .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .res, .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .close {
+      background-image: url("../images/win7-window-controls.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      -webkit-transition: all 300ms ease;
+              transition: all 300ms ease; }
+      .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .min:hover, .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .res:hover, .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .close:hover {
+        opacity: 1; }
+    .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .min {
+      background-position: 0 0;
+      border-radius: 0 0 0 10px; }
+    .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .res {
+      background-position: -21px 0; }
+    .win10 #desktop .desktop-contain .window .window_inner .window-top .float_right .close {
+      background-position: -41px 0px;
+      border-radius: 0 0 10px 0; }
+
+.win10 #desktop .desktop-contain .desktop-icon-contain .desktop-icon {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain; }
+  .win10 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.mycomputer {
+    background: url("../images/icons/icons-xp.png") 0px 4px; }
+  .win10 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.mydocuments {
+    background: url("../images/icons/icons-xp.png") 0px -120px; }
+  .win10 #desktop .desktop-contain .desktop-icon-contain .desktop-icon.recyclebin {
     background: url("../images/icons/icons-xp.png") 0px -79px; }
 
 .desktop-icon-contain .label {
